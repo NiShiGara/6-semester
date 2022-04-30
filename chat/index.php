@@ -12,7 +12,6 @@
 </form>
 
 <?php
-
 date_default_timezone_set('Asia/Vladivostok');
 
 function AddMesToJson($username, $message, $date){
@@ -41,7 +40,6 @@ if (isset($username )&&isset($password)&&($message == '')) {
 }
 
 if (isset($message)&&($message !== '')) {
-
         AddMesToJson($_COOKIE['user'], $message, $date);
         echo "<script> 
        document.getElementById(\"MesForm\").hidden=false; 
