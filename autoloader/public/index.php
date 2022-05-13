@@ -9,11 +9,13 @@
         <button >Send</button>
     </div>
 </form>
+
 <?php
 spl_autoload_register(function ($className) {
     $fullPath = dirname(__DIR__ ) . '/' . 'src/' . str_replace("\\", "/", $className) . '.php';
     require_once $fullPath;
 });
+
 use write;
 use second\read;
 $write= new write();
