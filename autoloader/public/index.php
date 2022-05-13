@@ -11,9 +11,7 @@
 </form>
 <?php
 spl_autoload_register(function ($className) {
-    $path = 'src/';
-    $extension = '.php';
-    $fullPath = dirname(__DIR__ ) . '/' . $path . str_replace("\\", "/", $className) . $extension;
+    $fullPath = dirname(__DIR__ ) . '/' . 'src/' . str_replace("\\", "/", $className) . '.php';
     require_once $fullPath;
 });
 use write;
