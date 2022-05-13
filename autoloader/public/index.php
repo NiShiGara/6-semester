@@ -9,7 +9,6 @@
         <button >Send</button>
     </div>
 </form>
-
 <?php
 spl_autoload_register(function ($className) {
     $path = 'src/';
@@ -17,17 +16,13 @@ spl_autoload_register(function ($className) {
     $fullPath = dirname(__DIR__ ) . '/' . $path . str_replace("\\", "/", $className) . $extension;
     require_once $fullPath;
 });
-
 use write;
 use second\read;
-
 $write= new write();
 $read= new read();
 
-
 date_default_timezone_set('Asia/Vladivostok');
 $FileJSON = "/var/www/html/autoloader/logs/MessagesHistory.json";
-
 $username = $_GET['username'];
 $password = $_GET['password'];
 $message = $_GET["OneMessage"];
