@@ -12,8 +12,8 @@
 
 <?php
 spl_autoload_register(function ($className) {
-    $fullPath = dirname(__DIR__ ) . '/' . 'src/' . str_replace("\\", "/", $className) . '.php';
-    require_once $fullPath;
+    $path = dirname(__DIR__ ) . '/' . 'src/' . str_replace("\\", "/", $className) . '.php';
+    require_once $path;
 });
 
 use write;
