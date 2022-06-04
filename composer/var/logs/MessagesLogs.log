@@ -1,0 +1,10 @@
+
+[2022-06-04T02:16:54.724673+10:00] chat.INFO: New message {"username":"Polina","message":"Это похоже на лабу 4, но тут есть мои боль и страдания"} []
+[2022-06-04T02:17:09.218199+10:00] chat.INFO: New message {"username":"Polina","message":"На самом деле тут просто твиг и монолог"} []
+[2022-06-04T02:17:28.810609+10:00] chat.INFO: New message {"username":"admin","message":"Proverka"} []
+[2022-06-04T02:17:34.626362+10:00] chat.INFO: New message {"username":"admin","message":"Норм"} []
+[2022-06-04T02:17:42.403391+10:00] chat.ERROR: The user tried to log in. Invalid username or password [] []
+[2022-06-04T02:17:47.289172+10:00] chat.ERROR: The user tried to log in. Invalid username or password [] []
+[2022-06-04T17:23:17.221619+10:00] chat.INFO: New message {"username":"admin","message":"Раз два три четыре "} []
+[2022-06-04T17:23:35.623809+10:00] chat.ERROR: The user tried to log in. Invalid username or password [] []
+[2022-06-04T17:33:50.033902+10:00] chat.INFO: New message {"username":"Rei","message":"Baka"} []
