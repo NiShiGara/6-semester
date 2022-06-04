@@ -3,6 +3,8 @@
 http://165.22.57.246:5555/
 
 # Логины и пароли
-1)Login: Polina Password: 123
-2)Login: Rei Password: 123
-3)Login: admin Password: password
+Login: Polina<br/>           Password: 123
+<br/><br/>
+Login: Rei<br/>           Password: 123
+<br/><br/>
+Login: admin<br/>           Password: password
