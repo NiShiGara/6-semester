@@ -1,0 +1,9 @@
+
+
+[2022-06-06T20:22:36.347820+10:00] chat.INFO: New message {"username":"Polina","message":"qwerty"} []
+[2022-06-06T20:23:55.736348+10:00] chat.INFO: New message {"username":"Polina","message":"hgf"} []
+[2022-06-06T20:27:20.752745+10:00] chat.INFO: New message {"username":"Polina","message":"Так и живем"} []
+[2022-06-06T20:28:53.654800+10:00] chat.INFO: New message {"username":"Polina","message":"lkjhg"} []
+[2022-06-06T20:39:14.812578+10:00] chat.INFO: New message {"username":"admin","message":"proverka"} []
+[2022-06-06T20:47:26.462670+10:00] chat.ERROR: The user tried to log in. Invalid username or password [] []
+[2022-06-06T20:49:23.272878+10:00] chat.INFO: New message {"username":"admin","message":"привет"} []
