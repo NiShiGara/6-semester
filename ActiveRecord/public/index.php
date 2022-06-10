@@ -1,7 +1,6 @@
 <?php
 use Twig\Environment;
 use Twig\Loader\FilesystemLoader;
-
 use App\Controller;
 use App\User;
 
