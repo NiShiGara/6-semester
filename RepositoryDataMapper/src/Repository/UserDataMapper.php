@@ -22,8 +22,8 @@ class UserDataMapper
         $stmt->execute();
        $results = $this->connection->query($sql);
         $arr = array();
-        foreach ($results as $result){
-            //$user = new User($result['db_id'], $result['db_nickname'], $result['db_name'], $result['db_surname'], $result['db_age']);
+        foreach ($results as $result)
+        {
             $user = new User();
             $user->setall($result['db_id'], $result['db_nickname'], $result['db_name'], $result['db_surname'], $result['db_age']);
             array_push($arr, $user);
@@ -31,18 +31,18 @@ class UserDataMapper
         return $arr;
     }
 
-    public function add(User $user)
+    public function add($id,$nickname,$name,$surname,$age)
     {
         $sql = "INSERT INTO ARUsers
-values( $this->id,'$this->nickname', '$this->name', '$this->surname', $this->age)";
+        values( $id,'$nickname', '$name', '$surname', $age)";
         $stmt = $this->connection->prepare($sql);
         $stmt->execute();
     }
 
-    public function update(User $user)
+    public function update($id,$nickname,$name,$surname,$age)
     {
-        $sql = "UPDATE ARUsers SET db_nickname='$this->nickname', db_name='$this->name',
-db_surname='$this->surname', db_age=$this->age WHERE db_id=$this->id";
+        $sql = "UPDATE ARUsers SET db_nickname='$nickname', db_name='$name',
+               db_surname='$surname', db_age=$age WHERE db_id=$id";
         $stmt = $this->connection->prepare($sql);
         $stmt->execute();
     }
@@ -56,9 +56,11 @@ db_surname='$this->surname', db_age=$this->age WHERE db_id=$this->id";
 
     public function findByValue($columnName, $value)
     {
-        if (is_string($value)) {
+        if (is_string($value))
+        {
             $sql = "SELECT * FROM ARUsers WHERE $columnName = '$value'";
-        } else {
+        } else
+        {
             $sql = "SELECT * FROM ARUsers WHERE $columnName = $value";
         }
 
