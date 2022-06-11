@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<table class="table">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Ник</th>
+        <th>Имя</th>
+        <th>Фамилия</th>
+        <th>Возраст</th>
+    </tr>
+    </thead>
+    <tbody>
+    {%  for row in t %}
+    <tr>
+        <td>{{row.id}}</td>
+        <td>{{row.nickname}}</td>
+        <td>{{row.name}}</td>
+        <td>{{row.surname}}</td>
+        <td>{{row.age}}</td>
+    </tr>
+    {%  endfor %}
+    </tbody>
+</table>
+<form action="/" method="POST">
+<div id = "AddForm">
+    <label> ID <input name="id" type="text"> </label><br>
+    <label> Ник <input name="nickname" type="text"> </label><br>
+    <label> Имя <input name="name" type="text"> </label><br>
+    <label> Фамилия <input name="surname" type="text"> </label><br>
+    <label> Возраст <input name="age" type="text"> </label><br>
+    <label> Что делать будем?</label>
+    <select name="action">
+        <option value="add">Добавим</option>
+        <option value="upd">Обновим</option>
+    </select>
+    <button>Кнопочка</button>
+
+    <br><br><label>Удаление/Поиск по ID</label><br>
+    <label> ID <input name="id2" type="text"> </label><br>
+    <label> Что делать будем?</label>
+        <select name="action2">
+        <option value="find">Найдём</option>
+        <option value="del">Удалим</option>
+    </select>
+    <button>Кнопочка</button>
+</div>
+</form>
+</html>
+
+<style>
+    input {
+        margin-bottom: 4px;
+        width: 100px;
+        padding: 4px 10px;
+        border: 1px solid #666;
+        background: #fce87d;
+        color: black;
+        font-size: 16px;
+    }
+    label {
+        margin-bottom: 4px;
+        font-size: 18px;
+        font-weight: 700;
+        color: black;
+    }
+    .table {
+        width: 30%;
+        margin-bottom: 20px;
+        border: 5px solid #fff;
+        border-top: 5px solid #fff;
+        border-bottom: 3px solid #fff;
+        border-collapse: collapse;
+        outline: 3px solid #ffd300;
+        font-size: 15px;
+        background: #fff!important;
+    }
+    .table th {
+        font-weight: bold;
+        padding: 7px;
+        background: #ffd300;
+        border: none;
+        text-align: left;
+        font-size: 15px;
+        border-top: 3px solid #fff;
+        border-bottom: 3px solid #ffd300;
+    }
+    .table td {
+        padding: 7px;
+        border: none;
+        border-top: 3px solid #fff;
+        border-bottom: 3px solid #fff;
+        font-size: 15px;
+    }
+    .table tbody tr:nth-child(even){
+        background: #f8f8f8!important;
+    }
+</style>
