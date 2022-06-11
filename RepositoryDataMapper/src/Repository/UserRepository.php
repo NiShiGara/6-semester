@@ -10,38 +10,46 @@ class UserRepository
     private $AllUsers = array();
     private UserDataMapper $mapper;
 
-    private $connection;
-
     public function __construct()
     {
         $this->mapper = new UserDataMapper();
         $this->AllUsers = $this->mapper->getAll();
     }
 
-    public function RepGetAll(){
+    public function RGetAll()
+    {
         return $this->AllUsers;
     }
 
-    public function Radd($user) {
-        $this->mapper->add($user);
+    public function Radd($id,$nickname,$name,$surname,$age)
+    {
+        $this->mapper->add($id,$nickname,$name,$surname,$age);
     }
 
-    public function Rupdate($user) {
-        $this->mapper->update($user);
+    public function Rupdate($id,$nickname,$name,$surname,$age)
+    {
+        $this->mapper->update($id,$nickname,$name,$surname,$age);
     }
 
-    public function Rdelete($DelId) {
-        foreach ($this->AllUsers as $user) {
-            if ($user->getId() == $DelId) {
+    public function Rdelete($DelId)
+    {
+        foreach ($this->AllUsers as $user)
+        {
+            if ($user->getId() == $DelId)
+            {
                 $this->mapper->delete($DelId);
                 return;
             }
         }
+        echo "Пользователь не найден</p>";
     }
 
-    public function findById($findID) {
-        foreach ($this->AllUsers as $user) {
-            if ($user->getId() == $findID) {
+    public function RfindById($findID)
+    {
+        foreach ($this->AllUsers as $user)
+        {
+            if ($user->getId() == $findID)
+            {
                 $nickname = $user->getNickname();
                 $name = $user->getName();
                 $surname = $user->getSurname();
