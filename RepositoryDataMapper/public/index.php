@@ -45,7 +45,7 @@ if ($user_id2 != null)
     switch ($action2)
     {
         case "find":
-            $reposy->findById($user_id2);
+            $reposy->RfindById($user_id2);
             break;
         case "del":
             $reposy->Rdelete($user_id2);
