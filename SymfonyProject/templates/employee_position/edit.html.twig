@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit EmployeePosition{% endblock %}
+
+{% block body %}
+    <h1>Edit EmployeePosition</h1>
+
+    {{ include('employee_position/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_employee_position_index') }}">back to list</a>
+
+    {{ include('employee_position/_delete_form.html.twig') }}
+{% endblock %}

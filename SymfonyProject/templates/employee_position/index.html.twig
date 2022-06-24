@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Должности сотрудников{% endblock %}
+
+{% block body %}
+    <h1>Должности сотрудников</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>ФИО работника</th>
+                <th>Должность</th>
+                <th>действия</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for employee_position in employee_positions %}
+            <tr>
+                <td>{{ employee_position.id }}</td>
+                <td>{{ employee_position.fio }}</td>
+                <td>{{ employee_position.employeePost}}</td>
+                <td>
+                    <a href="{{ path('app_employee_position_show', {'id': employee_position.id}) }}">show</a>
+                    <a href="{{ path('app_employee_position_edit', {'id': employee_position.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="2">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_employee_position_new') }}">Назначить новую должность</a>
+{% endblock %}

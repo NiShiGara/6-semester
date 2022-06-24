@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Языки программирования сотрудников{% endblock %}
+
+{% block body %}
+    <h1>Языки программирования сотрудников</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>ФИО</th>
+                <th>Язык прогр.</th>
+                <th>действия</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for programm_language in programm_languages %}
+            <tr>
+                <td>{{ programm_language.id }}</td>
+                <td>
+                    {% for fio in programm_language.fio %}
+                        {{ fio.FIO }}
+                    {% endfor %}
+                </td>
+                <td>{{ programm_language.language }}</td>
+                <td>
+                    <a href="{{ path('app_programm_language_show', {'id': programm_language.id}) }}">show</a>
+                    <a href="{{ path('app_programm_language_edit', {'id': programm_language.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_programm_language_new') }}">Добавить сотруднику новый язык</a>
+{% endblock %}

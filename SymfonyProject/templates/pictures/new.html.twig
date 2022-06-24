@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Фоточки загрузка{% endblock %}
+
+{% block body %}
+    <h1>Загрузить фоточку</h1>
+    {{ form_start(form) }}
+    {{ form_row(form.file) }}
+    <button class="btn">{{ button_label|default('Загрузить') }}</button>
+    {{ form_end(form) }}
+{% endblock %}
+
